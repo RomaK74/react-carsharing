@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import SliderContent from './SliderContent';
 import Arrow from './Arrow';
 import Dots from './Dots';
-import {useSelector} from "react-redux";
+import {useSelector} from 'react-redux';
 
 export const Slider = ({content}) => {
     let [widthScreen, setWidthScreen] = React.useState(window.screen.width);
@@ -14,10 +14,10 @@ export const Slider = ({content}) => {
 
     let width;
     switch (true) {
-        case widthScreen <= 1018:
-            width = 370;
+        case widthScreen <= 1014:
+            width = 380;
             break;
-        case widthScreen <= 1200:
+        case widthScreen <= 1145:
             width = 410;
             break;
         case widthScreen <= 1285:

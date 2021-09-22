@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import {Route, Switch} from 'react-router-dom';
-import {Main} from "./pages/Main";
-import {BurgerMenu} from "./components/BurgerMenu";
-import {useSelector} from "react-redux";
-import {Menu} from "./components/Menu/Menu";
+import {Main} from './pages/Main';
+import {BurgerMenu} from './components/BurgerMenu';
+import {useSelector} from 'react-redux';
+import {Menu} from './components/Menu/Menu';
 
 function App() {
     const isMenu = useSelector(state => state.main.isMenu);
@@ -19,10 +19,10 @@ function App() {
                 <BurgerMenu/>
                 {!isMenu && <div className="left-line__language" onClick={changeLanguage}>{language}</div>}
             </div>
-            {isMenu && <Menu />}
-                <Switch>
-                    <Route exact path="/react-carsharing" render={() => <Main/>}/>
-                </Switch>
+            {isMenu && <Menu/>}
+            <Switch>
+                <Route exact path="/react-carsharing" render={() => <Main/>}/>
+            </Switch>
         </div>
     );
 }

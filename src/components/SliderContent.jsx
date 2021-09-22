@@ -1,5 +1,5 @@
-import React from "react";
-import Slide from "./Slide";
+import React from 'react';
+import Slide from './Slide';
 
 const SliderContent = ({transition, translate, width, content}) => {
     return (

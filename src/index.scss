@@ -1,3 +1,5 @@
+@import "fonts/fonts.scss";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,31 +14,3 @@ code {
   monospace;
 }
 
-@font-face {
-  font-family: 'Roboto';
-  src: url("fonts/Roboto.woff");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto Bold';
-  src: url("fonts/Robotobold.woff");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto Light';
-  src: url("fonts/Robotolight.woff");
-  font-weight: 100;
-  font-style: normal;
-}
-
-
-
-@media screen and (max-width: 401px) {
-  .left-line {
-    display: none !important;
-  }
-}

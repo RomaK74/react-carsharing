@@ -2,15 +2,21 @@ import React from 'react'
 import rightArrow from '../img/right-arrow.svg';
 import leftArrow from '../img/left-arrow.svg';
 
-const Arrow = ({direction, handleClick}) => {
-    let [width, setWidth] = React.useState(window.screen.width);
-    React.useEffect(() => {
-        setWidth(window.screen.width);
-        if (width < 1285)
-            setMove(-10);
-    }, []);
+function getWindowDimensions() {
+    const {innerWidth: width} = window;
+    return width;
+}
 
+const Arrow = ({direction, handleClick}) => {
+    let [width, setWidth] = React.useState(getWindowDimensions);
     const [move, setMove] = React.useState(5);
+    React.useEffect(() => {
+        setWidth(getWindowDimensions);
+        if (width < 1285) {
+            setMove(-10);
+        }
+    }, [width]);
+
 
     return (
         <div className="container" onClick={handleClick}>
@@ -21,7 +27,7 @@ const Arrow = ({direction, handleClick}) => {
                  })}
             >
                 <img src={direction === 'right' ? rightArrow : leftArrow}
-                     alt="right"/>
+                     alt="arrow"/>
             </div>
             <div className="container__arrow-line"
                  style={direction === 'left' ? {left: '0'} : {right: '0'}}
