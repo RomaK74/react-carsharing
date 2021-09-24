@@ -17,6 +17,10 @@
     }
   }
 
+  .language {
+    display: none;
+  }
+
   .social-networks {
     margin-top: 38px;
     display: flex;
@@ -41,7 +45,13 @@
 
 @media screen and (max-width: 1440px) {
   .menu {
-    padding-top: 230px;
+    padding-left: 97px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    padding-top: 317px;
   }
 }
 
@@ -56,13 +66,21 @@
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 401px) {
   .menu {
-    padding-top: 100px;
-    padding-left: 40px;
+    padding-top: 80px;
+    padding-left: 28px;
 
     &__item {
       font-size: 22px;
+    }
+
+    .language {
+      display: block;
+      color: #0EC261;
+      position: absolute;
+      left: 28px;
+      bottom: 28px;
     }
   }
 }

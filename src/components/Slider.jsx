@@ -5,30 +5,33 @@ import Dots from './Dots';
 import {useSelector} from 'react-redux';
 
 export const Slider = ({content}) => {
-    let [widthScreen, setWidthScreen] = React.useState(window.screen.width);
-    let isMenu = useSelector(state => state.main.isMenu)
-
+    const [widthScreen, setWidthScreen] = React.useState(window.screen.width);
+    const [width, setWidth] = React.useState(688);
     React.useEffect(() => {
         setWidthScreen(window.screen.width);
     }, []);
+    React.useEffect(() => {
+        switch (true) {
+            case widthScreen <= 1014:
+                setWidth(380);
+                break;
+            case widthScreen <= 1145:
+                setWidth(410);
+                break;
+            case widthScreen <= 1285:
+                setWidth(500);
+                break;
+            case widthScreen <= 1356:
+                setWidth(600);
+                break;
+            default:
+                setWidth(688);
+        }
+        console.log(widthScreen, width);
+    }, [window.screen.width, width]);
 
-    let width;
-    switch (true) {
-        case widthScreen <= 1014:
-            width = 380;
-            break;
-        case widthScreen <= 1145:
-            width = 410;
-            break;
-        case widthScreen <= 1285:
-            width = 500;
-            break;
-        case widthScreen <= 1440:
-            width = 600;
-            break;
-        default:
-            width = 688;
-    }
+    let isMenu = useSelector(state => state.main.isMenu)
+
 
     const [state, setState] = useState({
         activeIndex: 0,
@@ -70,6 +73,14 @@ export const Slider = ({content}) => {
         })
     }
 
+    const onPressDot = (activeIndex, index) => {
+        setState({
+            ...state,
+            activeIndex: index,
+            translate: index * width
+        })
+    }
+
     return (
         <div className="slider">
             {isMenu && <div className="slider__fone"/>}
@@ -81,7 +92,7 @@ export const Slider = ({content}) => {
             />
             <Arrow direction="left" handleClick={prevSlide}/>
             <Arrow direction="right" handleClick={nextSlide}/>
-            <Dots slides={content} activeIndex={activeIndex}/>
+            <Dots slides={content} activeIndex={activeIndex} onPress={onPressDot}/>
         </div>
 
     )

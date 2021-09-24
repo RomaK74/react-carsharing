@@ -18,7 +18,7 @@ export const Main = () => {
         <div className="main">
             <div className="content">
                 <header className="content__up">
-                    {widthScreen < 401 && <BurgerMenu/>}
+                    {widthScreen < 402 && <BurgerMenu/>}
                     <h1 className="title">Need for drive</h1>
                     <Location/>
                 </header>

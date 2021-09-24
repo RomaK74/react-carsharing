@@ -4,6 +4,7 @@ import './Menu.scss';
 import {ReactComponent as Instagram} from '../../img/Instagram_white.svg';
 import {ReactComponent as Telegram} from '../../img/Telegram_white.svg';
 import {ReactComponent as Facebook} from '../../img/Facebook_white.svg';
+import {Language} from "../Language";
 
 export const Menu = () => {
     return (
@@ -33,5 +34,6 @@ export const Menu = () => {
                     <li className="social-networks__item"><Instagram/></li>
                 </a>
             </ul>
-        </nav>)
+            <Language />
+        </nav>);
 }
