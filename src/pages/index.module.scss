@@ -76,6 +76,10 @@ button {
     &__up {
       display: flex;
       justify-content: space-between;
+
+      .break {
+        flex-basis: 100%;
+      }
     }
 
     &__title {
@@ -244,6 +248,14 @@ button {
         opacity: 0;
         cursor: pointer;
 
+        &.right {
+          right: 0;
+        }
+
+        &.left {
+          left: 0;
+        }
+
         &:hover {
           opacity: 0.3;
 
@@ -258,7 +270,7 @@ button {
       }
 
       .container__arrow {
-        z-index: 999;
+        z-index: 9;
         display: flex;
         position: absolute;
         top: 50%;
@@ -269,6 +281,14 @@ button {
         cursor: pointer;
         align-items: center;
         transition: transform ease-in 0.1s;
+
+        &.right {
+          right: 5px;
+        }
+
+        &.left {
+          left: 5px;
+        }
 
         &:hover {
           transform: scale(1.1);
@@ -307,7 +327,7 @@ button {
   }
 
   .burger-menu_first-line {
-    top: 0;
+    top: 11px;
 
     &.active {
       transform: rotate(45deg);
@@ -318,7 +338,7 @@ button {
   }
 
   .burger-menu_second-line {
-    top: 8px;
+    top: 19px;
 
     &.active {
       transform: rotate(45deg);
@@ -326,7 +346,7 @@ button {
   }
 
   .burger-menu_third-line {
-    top: 8px;
+    top: 19px;
 
     &.active {
       transform: rotate(-45deg);
@@ -334,7 +354,7 @@ button {
   }
 
   .burger-menu_forth-line {
-    top: 16px;
+    top: 27px;
 
     &.active {
       transform: rotate(45deg);
@@ -376,6 +396,17 @@ button {
       .slider {
 
         .container {
+
+          &__arrow {
+
+            &.right {
+              right: -10px;
+            }
+
+            &.left {
+              left: -10px;
+            }
+          }
 
           &__arrow-line {
             width: 36px;
@@ -491,48 +522,13 @@ button {
   }
 }
 
-@media screen and (max-width: 940px) {
-  .main {
-
-    .content {
-      margin-left: 32px;
-      padding-right: 32px;
-
-      &__title {
-        font-size: 54px;
-      }
-
-      &__subtitle {
-        font-size: 54px;
-      }
-
-      &__text {
-        font-size: 18px;
-      }
-    }
-  }
-}
-
-
-@media screen and (max-width: 852px) {
+@media screen and (max-width: 941px) {
   .main {
 
     .content {
       margin-left: 32px;
       padding-right: 32px;
       height: 100vh;
-
-      &__title {
-        font-size: 70px;
-      }
-
-      &__subtitle {
-        font-size: 70px;
-      }
-
-      &__text {
-        font-size: 26px;
-      }
     }
 
     .slider-container {
@@ -553,64 +549,6 @@ button {
 }
 
 @media screen and (max-width: 542px) {
-  .main {
-
-    .content {
-      margin-left: 16px;
-      padding-right: 16px;
-      height: 100vh;
-
-      &__title {
-        font-size: 55px;
-      }
-
-      &__subtitle {
-        font-size: 55px;
-      }
-
-      &__text {
-        font-size: 22px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 498px) {
-  .title {
-    font-size: 24px;
-  }
-
-  .main {
-
-    .content {
-      margin-left: 16px;
-      padding-right: 16px;
-      height: 100vh;
-    }
-  }
-}
-
-@media screen and (max-width: 446px){
-  .main {
-
-    .content {
-
-      &__title {
-        font-size: 50px;
-      }
-
-      &__subtitle {
-        font-size: 50px;
-      }
-
-      &__text {
-        font-size: 22px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 401px) {
   .left-line {
     display: none;
   }
@@ -643,8 +581,7 @@ button {
   }
 
   .title {
-    font-size: 34px;
-    padding-left: 26px;
+    margin-left: auto;
   }
 
   .main {
@@ -671,20 +608,16 @@ button {
       }
 
       &__title {
-        font-size: 32px;
         padding-left: 16px;
         padding-right: 16px;
       }
 
       &__subtitle {
-        font-size: 32px;
         padding-left: 16px;
         padding-right: 16px;
-        margin-top: 2px;
       }
 
       &__text {
-        font-size: 18px;
         padding-left: 16px;
         padding-right: 16px;
         margin-top: 16px;
@@ -714,7 +647,49 @@ button {
   }
 }
 
-@media screen and (max-width: 294px) {
+@media screen and (max-width: 477px) {
+  .main {
+
+    .content {
+
+      &__title {
+        font-size: 52px;
+      }
+
+      &__subtitle {
+        margin-top: -8px;
+        font-size: 52px;
+      }
+
+      &__text {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 363px) {
+  .main {
+
+    .content {
+
+      &__title {
+        font-size: 32px;
+      }
+
+      &__subtitle {
+        font-size: 32px;
+        margin-top: -8px;
+      }
+
+      &__text {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 311px) {
   .title {
     font-size: 28px;
     padding-left: 0;

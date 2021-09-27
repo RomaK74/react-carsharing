@@ -1,37 +1,41 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import SliderContent from './SliderContent';
 import Arrow from './Arrow';
 import Dots from './Dots';
-import {useSelector} from 'react-redux';
+import styles from '../../../../pages/index.module.scss';
 
-export const Slider = ({content}) => {
-    const [widthScreen, setWidthScreen] = React.useState(window.screen.width);
-    const [width, setWidth] = React.useState(688);
-    React.useEffect(() => {
-        setWidthScreen(window.screen.width);
-    }, []);
-    React.useEffect(() => {
+export const Slider = ({content, handleWidth}) => {
+    const [width, setWidth] = useState(688);
+    const [widthScreen, setWidthScreen] = useState(window.screen.width);
+    const handleResize = () => {
         switch (true) {
-            case widthScreen <= 1014:
+            case window.innerWidth <= 1014:
                 setWidth(380);
                 break;
-            case widthScreen <= 1145:
+            case window.innerWidth <= 1145:
                 setWidth(410);
                 break;
-            case widthScreen <= 1285:
+            case window.innerWidth <= 1285:
                 setWidth(500);
                 break;
-            case widthScreen <= 1356:
+            case window.innerWidth <= 1356:
                 setWidth(600);
                 break;
             default:
                 setWidth(688);
         }
-        console.log(widthScreen, width);
-    }, [window.screen.width, width]);
+        handleWidth(window.innerWidth);
+    }
 
-    let isMenu = useSelector(state => state.main.isMenu)
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
+        setWidthScreen(window.screen.width);
+    });
 
+
+    useEffect(() => {
+        renewState();
+    }, [widthScreen]);
 
     const [state, setState] = useState({
         activeIndex: 0,
@@ -73,6 +77,14 @@ export const Slider = ({content}) => {
         })
     }
 
+    const renewState = () => {
+        return setState({
+            ...state,
+            activeIndex: activeIndex,
+            translate: activeIndex * width,
+        })
+    }
+
     const onPressDot = (activeIndex, index) => {
         setState({
             ...state,
@@ -82,8 +94,7 @@ export const Slider = ({content}) => {
     }
 
     return (
-        <div className="slider">
-            {isMenu && <div className="slider__fone"/>}
+        <div className={styles.slider}>
             <SliderContent
                 translate={translate}
                 transition={transition}

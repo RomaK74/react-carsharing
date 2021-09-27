@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+
+  &__left {
+    flex: 1 1 auto;
+    padding: 307px 0 0 128px;
+    height: 100vh;
+    background: #111518;
+  }
+
+  &__right {
+    width: 688px;
+    opacity: 0.81;
+    background: #111518;
+    height: 100vh;
+  }
+
+  &__item {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 15px;
+
+    a {
+      font-size: 32px;
+      color: white;
+
+      &:hover {
+        color: #0EC261;
+      }
+    }
+  }
+
+  .language {
+    display: none;
+  }
+
+  .social-networks {
+    margin-top: 38px;
+    display: flex;
+    max-width: 144px;
+    justify-content: space-between;
+
+    &__item {
+      cursor: pointer;
+
+      svg {
+
+        &:hover {
+
+          path {
+            fill: #0EC261;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .menu {
+
+    &__left {
+      padding-left: 97px;
+    }
+  }
+}
+
+@media screen and (max-width: 1356px) {
+  .menu {
+
+    &__right {
+      width: 600px;
+    }
+  }
+}
+
+@media screen and (max-width: 1285px) {
+  .menu {
+
+    &__right {
+      width: 500px;
+    }
+  }
+}
+
+@media screen and (max-width: 1145px) {
+  .menu {
+
+    &__right {
+      width: 410px;
+    }
+  }
+}
+
+@media screen and (max-width: 1014px) {
+  .menu {
+
+    &__right {
+      width: 380px;
+    }
+  }
+}
+
+@media screen and (max-width: 941px) {
+  .menu {
+
+    &__right {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+
+    &__left {
+      padding-top: 317px;
+    }
+  }
+}
+
+@media screen and (max-width: 542px) {
+  .menu {
+
+    &__left {
+      padding-top: 80px;
+      padding-left: 28px;
+    }
+
+    &__item {
+
+      a {
+        font-size: 22px;
+      }
+    }
+
+    .language {
+      display: block;
+      color: #0EC261;
+      position: absolute;
+      left: 28px;
+      bottom: 28px;
+    }
+  }
+}
+
+@media screen and (max-width: 230px) {
+  .menu {
+
+    &__left {
+      padding-top: 60px;
+      padding-left: 25px;
+    }
+
+    &__item {
+
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+}
