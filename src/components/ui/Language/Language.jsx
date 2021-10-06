@@ -1,7 +1,7 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {setLanguage} from '../../redux/actions/main';
-import styles from '../../pages/index.module.scss';
+import {setLanguage} from '../../../redux/actions/main';
+import styles from './Language.module.scss';
 
 export const Language = () => {
     const dispatch = useDispatch();

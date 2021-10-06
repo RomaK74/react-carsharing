@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from '../../../../pages/index.module.scss';
-import classNames from "classnames";
+import styles from './Slider.module.scss';
+import classNames from 'classnames';
 
 const Dot = ({active, onPress, index, activeIndex}) => (
-    <span className={styles.dots__dot} style={active ? {background: '#0EC261'} : {background: 'white'}}
+    <span className={classNames(styles.dots__dot, {[styles['active']]: active})}
           onClick={() => onPress(activeIndex, index)}/>
 );
 
@@ -14,6 +14,5 @@ const Dots = ({slides, activeIndex, onPress}) => (
         ))}
     </div>
 );
-
 
 export default Dots;

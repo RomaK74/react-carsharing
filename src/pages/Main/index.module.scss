@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  &:hover {
+    filter: brightness(90%);
+  }
+
+  &:active {
+    filter: brightness(80%);
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+
+  .content {
+    margin-left: 64px;
+    width: 100%;
+    padding: 32px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__up {
+      display: flex;
+      justify-content: space-between;
+
+      .break {
+        flex-basis: 100%;
+      }
+    }
+
+    &__title {
+      font-family: "Roboto Bold", sans-serif;
+      font-size: 70px;
+    }
+
+    &__subtitle {
+      color: #0EC261;
+      font-family: "Roboto Bold", sans-serif;
+      font-size: 70px;
+      margin-top: -12px;
+    }
+
+    &__text {
+      color: #999;
+      font-size: 26px;
+      font-family: "Roboto Light", sans-serif;
+      margin-top: 24px;
+      margin-bottom: 60px;
+    }
+
+    &__button {
+      width: 250px;
+      background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+      background-blend-mode: darken;
+      border-radius: 8px;
+      font-size: 18px;
+      padding: 15px 50px;
+      border: 0;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    &__down {
+      display: flex;
+      justify-content: space-between;
+      font-family: "Roboto", sans-serif;
+      font-size: 13px;
+
+      .copyright {
+        color: #999;
+      }
+
+      .phone a {
+        color: black;
+
+        &:hover {
+          color: #0EC261;
+        }
+
+        &:active {
+          color: #0EC261;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1356px) {
+  .main {
+
+    .slider-container {
+      max-width: 600px;
+    }
+  }
+}
+
+@media screen and (max-width: 1285px) {
+  .main {
+
+    .slider-container {
+      max-width: 500px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1145px) {
+  .main {
+
+    .content {
+      margin-left: 32px;
+      padding-right: 32px;
+    }
+
+    .slider-container {
+      max-width: 410px;
+    }
+  }
+}
+
+@media screen and (max-width: 1014px) {
+  .main {
+
+    .content {
+      margin-left: 32px;
+      padding-right: 32px;
+    }
+
+    .slider-container {
+      width: 380px;
+    }
+  }
+}
+
+@media screen and (max-width: 984px) {
+  .main {
+
+    .content {
+      margin-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 941px) {
+  .main {
+
+    .content {
+      margin-left: 32px;
+      padding-right: 32px;
+      height: 100vh;
+    }
+
+    .slider-container {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 604px) {
+  .main {
+
+    .content {
+      margin-left: 16px;
+      padding-right: 16px;
+      height: 100vh;
+    }
+  }
+}
+
+@media screen and (max-width: 542px) {
+  .title {
+    margin-left: auto;
+  }
+
+  .main {
+
+    .content {
+      margin-left: 0;
+      height: 100vh;
+      padding: 0;
+
+      &__center {
+        margin-top: 34px;
+      }
+
+      &__button {
+        width: 100%;
+        border-radius: 0;
+      }
+
+      &__title {
+        font-size: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      &__subtitle {
+        font-size: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-top: -4px;
+      }
+
+      &__text {
+        font-size: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-top: 16px;
+        margin-bottom: 32px;
+      }
+
+      .content__down {
+        margin-top: auto;
+        display: block;
+        padding: 16px;
+        height: 72px;
+        background: #151B1F;
+        text-align: right;
+
+        .copyright {
+          margin-bottom: 11px;
+          color: #EEE;
+        }
+
+        .phone {
+          a {
+            color: #EEE;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 311px) {
+  .title {
+    font-size: 28px;
+    padding-left: 0;
+  }
+
+  .main {
+
+    .content {
+      margin-left: 0;
+      height: 100vh;
+      padding: 0;
+
+      &__button {
+        width: 100%;
+        border-radius: 0;
+      }
+
+      &__up {
+        padding: 16px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      &__title {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      &__subtitle {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-top: -4px;
+      }
+
+      &__text {
+        font-size: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  }
+}

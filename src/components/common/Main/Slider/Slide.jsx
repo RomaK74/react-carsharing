@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../../../pages/index.module.scss';
+import styles from './Slider.module.scss';
 
 const Slide = ({content, title, subtitle, but}) => {
     return (

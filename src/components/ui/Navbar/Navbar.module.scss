@@ -1,0 +1,16 @@
+.navbar {
+  position: absolute;
+  padding: 30px 20px;
+  height: 100vh;
+  background: #151B1F;;
+  display: flex;
+  width: 64px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 542px) {
+  .navbar {
+    display: none;
+  }
+}

@@ -1,14 +1,18 @@
-import slide1 from "../img/slide-1.png";
-import slide2 from "../img/slide-3.png";
-import slide3 from "../img/slide-2.png";
-import slide4 from "../img/slide-4.png";
-
+import slide1 from "../../../../img/slide-1.png";
+import slide2 from "../../../../img/slide-3.png";
+import slide3 from "../../../../img/slide-2.png";
+import slide4 from "../../../../img/slide-4.png";
+import rightArrow from '../../../../img/right-arrow.svg';
+import leftArrow from '../../../../img/left-arrow.svg';
 
 const images = [slide1, slide2, slide3, slide4];
+
+export const arrows = [rightArrow, leftArrow];
 
 const titles = ['Бесплатная парковка', 'Страховка', 'Бензин', 'Обслуживание'];
 const subtitles = ['Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в аэропортах.',
     'Полная страховка автомобиля', 'Полный бак на любой заправке города за наш счёт', 'Автомобиль проходит еженедельное ТО'];
+
 export const slidersContent = [
     {
         slide: images[0],

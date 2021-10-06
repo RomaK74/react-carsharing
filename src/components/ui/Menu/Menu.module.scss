@@ -10,9 +10,12 @@
 
   &__left {
     flex: 1 1 auto;
-    padding: 307px 0 0 128px;
+    padding-left: 128px;
     height: 100vh;
     background: #111518;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__right {
@@ -116,20 +119,10 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .menu {
-
-    &__left {
-      padding-top: 317px;
-    }
-  }
-}
-
 @media screen and (max-width: 542px) {
   .menu {
 
     &__left {
-      padding-top: 80px;
       padding-left: 28px;
     }
 
@@ -154,7 +147,6 @@
   .menu {
 
     &__left {
-      padding-top: 60px;
       padding-left: 25px;
     }
 

@@ -3,11 +3,15 @@ import {Link, useHistory} from 'react-router-dom';
 import {ReactComponent as Instagram} from '../../../img/Instagram_white.svg';
 import {ReactComponent as Telegram} from '../../../img/Telegram_white.svg';
 import {ReactComponent as Facebook} from '../../../img/Facebook_white.svg';
-import {Language} from '../Language';
+import {Language} from '../Language/Language';
 import styles from './Menu.module.scss';
+
+const url = '/react-carsharing';
+const url2 = '/react-carsharing/';
 
 export const Menu = () => {
     const history = useHistory();
+    const path = history.location.pathname;
 
     return (
         <nav className={styles.menu}>
@@ -31,6 +35,6 @@ export const Menu = () => {
                 </ul>
                 <div className={styles.language}><Language/></div>
             </div>
-            {history.location.pathname === '/react-carsharing' && <div className={styles.menu__right}/>}
+            {(path === url || path === url2) && <div className={styles.menu__right}/>}
         </nav>);
 }
