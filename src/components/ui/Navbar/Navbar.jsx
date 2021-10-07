@@ -3,11 +3,9 @@ import {BurgerMenu} from '../BurgerMenu/BurgerMenu';
 import {Language} from '../Language/Language';
 import styles from './Navbar.module.scss';
 
-export const Navbar = ({isMenu, setMenu}) => {
-    return (
-        <div className={styles['navbar']}>
-            <BurgerMenu setMenu={setMenu} isMenu={isMenu}/>
-            {!isMenu && <Language/>}
-        </div>
-    );
-}
+export const Navbar = ({isMenu, setMenu}) => (
+    <div className={styles['navbar']}>
+        <BurgerMenu setMenu={setMenu} isMenu={isMenu}/>
+        {!isMenu && <Language/>}
+    </div>
+);

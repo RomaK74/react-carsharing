@@ -11,6 +11,9 @@ import {Header} from '../../components/ui/Header/Header';
 export const Main = ({isMenu, setMenu}) => {
     const dispatch = useDispatch();
     let isLoader = useSelector(state => state.main.isLoading);
+    const onClickOrderButton = () => {
+        dispatch(setLoading(true));
+    }
 
     return (
         <div className={styles.main}>
@@ -22,8 +25,9 @@ export const Main = ({isMenu, setMenu}) => {
                     <div className={styles.content__text}>Поминутная аренда авто твоего города</div>
                     <Link to="/react-carsharing/order">
                         <button className={styles.content__button}
-                                onClick={() => dispatch(setLoading(true))}>{!isLoader ? 'Забронировать' :
-                            <Loader/>}</button>
+                                onClick={onClickOrderButton}>{!isLoader ? 'Забронировать' :
+                            <Loader/>}
+                        </button>
                     </Link>
                 </section>
                 <footer className={styles.content__down}>

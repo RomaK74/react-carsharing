@@ -7,7 +7,6 @@ import {slidersContent} from './sliderInfo';
 
 export const Slider = () => {
     const [width, setWidth] = useState(688);
-    const [widthScreen, setWidthScreen] = useState(window.screen.width);
     const handleResize = () => {
         switch (true) {
             case window.innerWidth <= 1014:
@@ -25,18 +24,16 @@ export const Slider = () => {
             default:
                 setWidth(688);
         }
-        setWidthScreen(window.innerWidth);
     }
 
     useEffect(() => {
         window.addEventListener("resize", handleResize);
-        setWidthScreen(window.screen.width);
     });
 
 
     useEffect(() => {
         renewState();
-    }, [widthScreen]);
+    }, [width]);
 
     const [state, setState] = useState({
         activeIndex: 0,
@@ -59,7 +56,7 @@ export const Slider = () => {
             ...state,
             activeIndex: activeIndex + 1,
             translate: (activeIndex + 1) * width
-        })
+        });
     }
 
     const prevSlide = () => {
@@ -75,7 +72,7 @@ export const Slider = () => {
             ...state,
             activeIndex: activeIndex - 1,
             translate: (activeIndex - 1) * width
-        })
+        });
     }
 
     const renewState = () => {
@@ -83,7 +80,7 @@ export const Slider = () => {
             ...state,
             activeIndex: activeIndex,
             translate: activeIndex * width,
-        })
+        });
     }
 
     const onPressDot = (activeIndex, index) => {
@@ -91,7 +88,7 @@ export const Slider = () => {
             ...state,
             activeIndex: index,
             translate: index * width
-        })
+        });
     }
 
     return (
@@ -99,14 +96,13 @@ export const Slider = () => {
             <SliderContent
                 translate={translate}
                 transition={transition}
-                width={widthScreen * slidersContent.length}
+                width={window.innerWidth * slidersContent.length}
                 content={slidersContent}
             />
             <Arrow direction="left" handleClick={prevSlide}/>
             <Arrow direction="right" handleClick={nextSlide}/>
             <Dots slides={slidersContent} activeIndex={activeIndex} onPress={onPressDot}/>
         </div>
-
-    )
+    );
 }
 
