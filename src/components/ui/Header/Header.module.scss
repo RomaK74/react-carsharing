@@ -1,0 +1,41 @@
+.content {
+  margin-left: 64px;
+  width: 100%;
+  padding: 32px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__up {
+    display: flex;
+    justify-content: space-between;
+
+    .bm, .break {
+      display: none;
+    }
+
+    .title {
+      color: #0EC261;
+    }
+
+    .break {
+      flex-basis: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 542px) {
+  .content {
+
+    &__up {
+      padding: 16px 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .bm, .break {
+        display: block;
+      }
+    }
+  }
+}
