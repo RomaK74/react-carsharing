@@ -1,0 +1,18 @@
+.location {
+  align-items: center;
+  display: flex;
+  color: #999;
+
+  &__city {
+    font-size: 14px;
+    margin-left: 8px;
+    font-style: normal;
+  }
+}
+
+@media screen and (max-width: 542px) {
+  .location {
+    margin-left: auto;
+    margin-top: 9px;
+  }
+}

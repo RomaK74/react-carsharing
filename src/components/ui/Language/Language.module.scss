@@ -1,0 +1,25 @@
+.language {
+  color: #0EC261;
+  font-size: 13px;
+  position: relative;
+
+  &:after {
+    content: "";
+    top: -13px;
+    left: -10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid transparent;
+    position: absolute;
+  }
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+
+    &:after {
+      border-color: white;
+    }
+  }
+}
