@@ -1,0 +1,53 @@
+.add {
+  padding-top: 33px;
+  height: calc(100vh - 139px);
+
+  &__point {
+    margin-bottom: 32px;
+
+    label {
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    .rate {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .property {
+    margin-bottom: 16px;
+  }
+
+  .date {
+    &__start {
+      margin-bottom: 8px;
+    }
+
+    &__start, &__finish {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      width: 250px;
+      height: 25px;
+    }
+
+    input {
+      font-size: 14px;
+      -webkit-appearance: none;
+      border: none;
+      border-bottom: 1px solid #999;
+      width: 224px;
+      padding: 3px 8px;
+    }
+  }
+
+  .radiobuttons {
+    display: flex;
+    margin: 16px 0 34px 0;
+  }
+}

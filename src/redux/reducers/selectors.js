@@ -1,0 +1,12 @@
+export const selectorGlobalCar = state => state.order.car;
+export const selectorCars = state => state.order.cars;
+export const selectorCity = state => state.order.city;
+export const selectorPoint = state => state.order.point;
+export const selectorCities = state => state.data.cities;
+export const selectorPoints = state => state.data.points[0];
+export const selectorIsConfirm = state => state.order.isConfirm;
+export const selectorStep = state => state.order.step;
+export const selectorMapState = state => state.order.mapState;
+export const selectorPointsForMap = state => state.order.pointsForMap;
+export const selectorCanNext = state => state.order.canNext;
+export const selectorIsLoading = state => state.main.isLoading;

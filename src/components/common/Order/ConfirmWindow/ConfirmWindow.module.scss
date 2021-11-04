@@ -1,0 +1,53 @@
+.confirm {
+  z-index: 9999;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  justify-content: center;
+  align-items: center;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    width: 405px;
+    height: 157px;
+    background: white;
+
+    .question {
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      color: #121212;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+
+      .button {
+        padding: 16px 32px;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        border-radius: 8px;
+        border: none;
+        outline: 0;
+        color: white;
+        background-blend-mode: darken;
+        cursor: pointer;
+
+        &.yes {
+          background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+        }
+
+        &.no {
+          background: linear-gradient(90deg, #493013 0%, #7B0C3B 100%);
+        }
+      }
+    }
+  }
+}

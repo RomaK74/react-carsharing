@@ -1,0 +1,90 @@
+.order {
+  &__info {
+    box-sizing: border-box;
+    padding-top: 32px;
+    width: 287px;
+    padding-left: 32px;
+    height: 100%;
+
+    .price {
+      margin: 32px 0;
+    }
+
+    .button {
+      padding: 16px;
+      width: 100%;
+      color: white;
+      font-size: 18px;
+      outline: none;
+      border: 0;
+      border-radius: 8px;
+      line-height: 21px;
+      background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+      cursor: pointer;
+
+      &.back {
+        background: linear-gradient(90deg, #493013 0%, #7B0C3B 100%);
+      }
+
+      &:disabled {
+        background-blend-mode: darken;
+        background: #EEEEEE;
+      }
+    }
+
+    ul {
+
+      li {
+        font-size: 14px;
+        color: #999;
+        position: relative;
+        display: flex;
+        max-width: 287px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+
+        div {
+          flex: 1;
+          height: 1px;
+          border-bottom: 1px dashed #dfdfdf;
+          position: relative;
+          bottom: -14px;
+          margin: 0 7px;
+        }
+
+        .property {
+          position: absolute;
+          top: -18px;
+          right: 0;
+        }
+
+        .value {
+          line-height: 16px;
+          text-align: end;
+        }
+
+        hr {
+          flex: 1;
+          border: none;
+          background-image: linear-gradient(to right, #333 10%, rgba(255, 255, 255, 0) 0%);
+          background-position: bottom;
+          background-size: 4px 1px;
+          background-repeat: repeat-x;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 52px;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 784px) {
+  .container {
+    .order__info {
+      padding-left: 0;
+    }
+  }
+}

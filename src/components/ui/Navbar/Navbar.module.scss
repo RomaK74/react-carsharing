@@ -1,0 +1,21 @@
+.navbar {
+  position: fixed;
+  padding: 30px 20px;
+  height: 100vh;
+  background: #151B1F;;
+  display: flex;
+  width: 64px;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &.dark {
+    background: #111518;
+    z-index: 1000;
+  }
+}
+
+@media screen and (max-width: 542px) {
+  .navbar {
+    display: none;
+  }
+}

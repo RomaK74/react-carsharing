@@ -1,0 +1,43 @@
+.card {
+  border: 1px solid #eee;
+  padding: 16px;
+
+  &.active {
+    border: 1px solid #0EC261;
+  }
+
+  &.notActive {
+    border: 1px solid #eee;
+  }
+
+  &:hover {
+    border: 1px solid #999;
+    cursor: pointer;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .price {
+    color: #999;
+    margin-bottom: 37px;
+  }
+
+  .image {
+    margin-left: 81px;
+
+    img {
+      width: 256px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+
+    .image {
+      margin-left: 0;
+    }
+  }
+}

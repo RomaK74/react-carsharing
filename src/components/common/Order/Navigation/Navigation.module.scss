@@ -1,0 +1,94 @@
+.navigation {
+  width: 100%;
+  border-top: 1px solid #EEE;
+  border-bottom: 1px solid #EEE;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 32px;
+
+  .confirm {
+    font-family: "Roboto Bold", sans-serif;
+    font-weight: 900;
+  }
+
+  .points {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+
+    &.active {
+      color: #0EC261;
+    }
+
+    &__item {
+
+      button {
+        width: 100%;
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        display: flex;
+      }
+
+      .link {
+
+        font-family: "Roboto Bold", sans-serif;
+        font-size: 14px;
+        color: #999;
+
+        &.active {
+          color: #0EC261;
+        }
+
+        &.filled {
+          color: black;
+        }
+
+        .nav-link-selected {
+          color: red;
+        }
+      }
+
+    }
+
+    &__img {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 1437px) {
+  .navigation {
+    padding-left: 37px;
+  }
+}
+
+@media screen and (max-width: 1355px) {
+  .navigation {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .navigation {
+    margin-top: 0;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-right: 20px;
+    overflow: scroll;
+
+    ul {
+
+      li {
+        &:last-child {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.result {
+  height: calc(100vh - 139px);
+
+  &__card {
+    margin-top: 32px;
+    display: flex;
+    width: 736px;
+    justify-content: space-between;
+
+    div {
+      margin-bottom: 11px;
+      font-size: 14px;
+    }
+
+    .confirm {
+      font-size: 24px;
+    }
+
+    .title {
+      font-size: 18px;
+    }
+
+    .number {
+
+      span {
+        padding: 4px 8px;
+        border: 1px solid #999999;
+        box-sizing: border-box;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .result {
+    &__card {
+      width: 550px;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .result {
+    &__card {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .result {
+    &__card {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}
